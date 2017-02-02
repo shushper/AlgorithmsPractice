@@ -5,7 +5,6 @@ package arrays
  */
 
 
-
 class OrderedArrayAlgorithms {
 
     fun binarySearchLafore(array: IntArray, searchValue: Int): Int {
@@ -28,11 +27,33 @@ class OrderedArrayAlgorithms {
                 }
             }
         }
-     }
+    }
+
+    fun binarySearchKotlin(array: IntArray, searchValue: Int): Int {
+        var low = 0
+        var high = array.lastIndex
+
+        while (low <= high) {
+            val mid = (low + high).ushr(1)
+            val midVal = array[mid]
+
+            if (midVal < searchValue) {
+                low = mid + 1
+            } else if (midVal > searchValue) {
+                high = mid - 1
+            } else {
+                return mid
+            }
+        }
+
+        return -1
+    }
 
     fun binarySearchKotlinInvoke(array: IntArray, value: Int): Int {
         return array.binarySearch(value)
     }
+
+
 
 
 
