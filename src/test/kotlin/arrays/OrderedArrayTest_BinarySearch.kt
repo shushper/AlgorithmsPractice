@@ -16,20 +16,34 @@ class OrderedArrayTest_BinarySearch {
         algs = OrderedArrayAlgorithms()
     }
 
-
     @Test
-    fun testBinarySearch1() {
-
-
+    fun testBinarySearchLafore() {
         var array = intArrayOf(1,2,3,4,5)
-        var index = algs.binarySearch(array, 3)
+        var index = algs.binarySearchLafore(array, 3)
 
         Assert.assertEquals(2, index)
 
 
         array = intArrayOf(1,2,3,4,5)
-        index = algs.binarySearch(array, 8)
+        index = algs.binarySearchLafore(array, 8)
+
+        Assert.assertTrue(index < 0)
+    }
+
+
+    @Test
+    fun testBinarySearchKotlinInvoke() {
+
+
+        var array = intArrayOf(1,2,3,4,5)
+        var index = algs.binarySearchKotlinInvoke(array, 3)
 
         Assert.assertEquals(2, index)
+
+
+        array = intArrayOf(1,2,3,4,5)
+        index = algs.binarySearchKotlinInvoke(array, 8)
+
+        Assert.assertTrue(index < 0)
     }
 }
