@@ -9,39 +9,39 @@ import org.junit.Test
  */
 class ArrayTest_Reverse {
 
-    lateinit var reverse: ArrayAlgorithms
+    lateinit var algs: ArrayAlgorithms
 
     @Before
     fun before() {
-        reverse = ArrayAlgorithms()
+        algs = ArrayAlgorithms()
     }
 
     @Test
     fun testReverse1() {
         var array = intArrayOf(1,2,3,4,5)
 
-        reverse.reverse1(array)
+        algs.reverse(array)
 
         Assert.assertArrayEquals(intArrayOf(5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2,3,4,5,6)
 
-        reverse.reverse1(array)
+        algs.reverse(array)
 
         Assert.assertArrayEquals(intArrayOf(6, 5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2)
 
-        reverse.reverse1(array)
+        algs.reverse(array)
 
         Assert.assertArrayEquals(intArrayOf(2,1), array)
 
 
         array = intArrayOf(1)
 
-        reverse.reverse1(array)
+        algs.reverse(array)
 
         Assert.assertArrayEquals(intArrayOf(1), array)
     }
@@ -50,28 +50,28 @@ class ArrayTest_Reverse {
     fun testReverse2() {
         var array = intArrayOf(1,2,3,4,5)
 
-        reverse.reverse2(array)
+        algs.reverseKotlin(array)
 
         Assert.assertArrayEquals(intArrayOf(5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2,3,4,5,6)
 
-        reverse.reverse2(array)
+        algs.reverseKotlin(array)
 
         Assert.assertArrayEquals(intArrayOf(6, 5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2)
 
-        reverse.reverse2(array)
+        algs.reverseKotlin(array)
 
         Assert.assertArrayEquals(intArrayOf(2,1), array)
 
 
         array = intArrayOf(1)
 
-        reverse.reverse2(array)
+        algs.reverseKotlin(array)
 
         Assert.assertArrayEquals(intArrayOf(1), array)
     }
@@ -81,28 +81,28 @@ class ArrayTest_Reverse {
     fun testReverse3() {
         var array = intArrayOf(1,2,3,4,5)
 
-        reverse.reverse3(array)
+        algs.reverseKotlinInvoke(array)
 
         Assert.assertArrayEquals(intArrayOf(5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2,3,4,5,6)
 
-        reverse.reverse3(array)
+        algs.reverseKotlinInvoke(array)
 
         Assert.assertArrayEquals(intArrayOf(6, 5,4,3,2,1), array)
 
 
         array = intArrayOf(1,2)
 
-        reverse.reverse3(array)
+        algs.reverseKotlinInvoke(array)
 
         Assert.assertArrayEquals(intArrayOf(2,1), array)
 
 
         array = intArrayOf(1)
 
-        reverse.reverse3(array)
+        algs.reverseKotlinInvoke(array)
 
         Assert.assertArrayEquals(intArrayOf(1), array)
     }
